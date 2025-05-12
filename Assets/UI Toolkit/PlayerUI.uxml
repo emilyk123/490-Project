@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+        <ui:ProgressBar value="22" title="Health" style="align-self: flex-start; width: 35%; height: auto; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: column; width: 30%;" />
+        <ui:ProgressBar value="86" title="EXP" style="width: 35%; margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px;" />
+    </ui:VisualElement>
+</ui:UXML>
