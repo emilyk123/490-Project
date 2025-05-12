@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/MainMenu.uss?fileID=7433441132597879392&amp;guid=f4c1d8d3df8b26f41a30b9af1295d6a5&amp;type=3#MainMenu" />
     <ui:VisualElement style="flex-grow: 1; flex-direction: column; justify-content: center; align-self: center;">
-        <ui:Label text="Descent" style="-unity-text-align: upper-center; font-size: 80px; margin-bottom: 10px;" />
+        <ui:Label text="Descent" style="-unity-text-align: upper-center; font-size: 80px; margin-bottom: 10px; color: rgb(255, 255, 255);" />
         <ui:Button text="New Game" class="button" />
         <ui:Button text="Resume" class="button" />
         <ui:Button text="Exit" class="button" />

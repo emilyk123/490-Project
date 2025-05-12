@@ -5,3 +5,4 @@
 *.uxml eol=crlf
 *.json eol=lf
 *.xsd eol=crlf
+*.png binary
