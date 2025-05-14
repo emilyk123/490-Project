@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
         firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
 
         // Fire when button is clicked
-        if (Input.GetButtonDown(0))
+        if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
         }
