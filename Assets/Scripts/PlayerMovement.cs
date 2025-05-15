@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject UI;
     public bool canMove = true;
     public GameObject inventory;
+    bool close = false;
 
     void Update()
     {
@@ -17,40 +18,35 @@ public class PlayerMovement : MonoBehaviour
                                               0);
         }
 
-if (Input.GetKeyDown(KeyCode.E))
-{
-    if (inventory != null)
-    {
-        bool anyChildActive = false;
-        foreach (Transform child in inventory.transform)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (child != null && child.gameObject.activeSelf)
+            foreach (Transform child in inventory.transform)
             {
-                anyChildActive = true;
-                break;
+                if (child != null && child.gameObject.activeSelf)
+                {
+                    break;
+                }
+            }
+
+            bool newState = false;
+
+            if (!close)
+            {
+                inventory.SetActive(true);
+                close = true;
+            }
+            else
+            {
+                inventory.SetActive(false);
+                close = false;
+            }
+
+            foreach (Transform child in inventory.transform)
+            {
+                child.gameObject.SetActive(newState);
             }
         }
 
-        if (anyChildActive)
-        {
-            // If children visible, hide all children AND deactivate parent
-            foreach (Transform child in inventory.transform)
-            {
-                child.gameObject.SetActive(false);
-            }
-            inventory.SetActive(false);
-        }
-        else
-        {
-            // If children hidden, activate parent and show all children
-            inventory.SetActive(true);
-            foreach (Transform child in inventory.transform)
-            {
-                child.gameObject.SetActive(true);
-            }
-        }
-    }
-}
     }
 
     void OnTriggerEnter2D(Collider2D collision)
