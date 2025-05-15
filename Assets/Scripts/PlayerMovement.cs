@@ -1,18 +1,11 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] int moveSpeed = 8;
     [SerializeField] Camera mainCamera;
-    [SerializeField] UIDocument shopUI;
-    VisualElement root;
+    public GameObject UI;
     bool canMove = true;
-
-    void Start()
-    {
-        root = shopUI.rootVisualElement;
-    }
 
     void Update()
     {
@@ -30,12 +23,13 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.localPosition = new Vector3(10.1f, -3.04f, 0);
             mainCamera.transform.position = new Vector3(23.55f, 0.59f, -10);
+            UI.SetActive(false);
         }
 
         if (collision.CompareTag("Shop"))
         {
             canMove = false;
-            root.style.display = DisplayStyle.Flex;
+            UI.SetActive(true);
         }
     }
 }
