@@ -2,8 +2,8 @@
     <Style src="project://database/Assets/UI%20Toolkit/MainMenu.uss?fileID=7433441132597879392&amp;guid=f4c1d8d3df8b26f41a30b9af1295d6a5&amp;type=3#MainMenu" />
     <ui:VisualElement style="flex-grow: 1; flex-direction: column; justify-content: center; align-self: center;">
         <ui:Label text="Descent" style="-unity-text-align: upper-center; font-size: 80px; margin-bottom: 10px; color: rgb(255, 255, 255);" />
-        <ui:Button text="New Game" class="button" />
-        <ui:Button text="Resume" class="button" />
-        <ui:Button text="Exit" class="button" />
+        <ui:Button text="New Game" name="NewGame" class="button" />
+        <ui:Button text="Resume" name="Resume" class="button" style="border-left-color: rgb(58, 58, 58); border-right-color: rgb(58, 58, 58); border-top-color: rgb(58, 58, 58); border-bottom-color: rgb(58, 58, 58); background-color: rgb(114, 114, 114);" />
+        <ui:Button text="Exit" name="Exit" class="button" />
     </ui:VisualElement>
 </ui:UXML>
