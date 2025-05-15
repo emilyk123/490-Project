@@ -3,6 +3,7 @@ using UnityEngine;
 public class UpgradeButton : MonoBehaviour
 {
     public GameObject upgrade;
+    public PlayerUIScript player;
 
     void Awake()
     {
@@ -14,6 +15,7 @@ public class UpgradeButton : MonoBehaviour
         if (upgrade != null)
         {
             upgrade.SetActive(!upgrade.activeSelf);
+            player.changeHealth(10);
         }
     }
 }
