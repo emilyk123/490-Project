@@ -9,6 +9,7 @@ public class Button : MonoBehaviour
     {
         if (UI != null)
         {
+            player.purchasedItems.Add(gameObject.name);
             UI.SetActive(!UI.activeSelf);
             player.canMove = true;
         }

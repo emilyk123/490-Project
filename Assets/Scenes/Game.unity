@@ -166,7 +166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 1587905508}
-  player: {fileID: 0}
+  player: {fileID: 1450891969}
+  purchasedItems: []
 --- !u!61 &47111902
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -660,6 +661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1497062791}
   player: {fileID: 1450891969}
+  purchasedItems: []
 --- !u!61 &196535135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -809,6 +811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1497062791}
   player: {fileID: 1450891969}
+  purchasedItems: []
 --- !u!61 &303956784
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8318,7 +8321,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 1587905508}
-  player: {fileID: 0}
+  player: {fileID: 1450891969}
+  purchasedItems: []
 --- !u!1 &1141225628
 GameObject:
   m_ObjectHideFlags: 0
@@ -8467,7 +8471,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 1587905508}
-  player: {fileID: 0}
+  player: {fileID: 1450891969}
+  purchasedItems: []
 --- !u!1 &1313437309
 GameObject:
   m_ObjectHideFlags: 0
@@ -12085,6 +12090,9 @@ MonoBehaviour:
   UI: {fileID: 1587905508}
   canMove: 1
   inventory: {fileID: 1497062791}
+  healthButton: {fileID: 196535134}
+  upgradeButton: {fileID: 2029423307}
+  keyButton: {fileID: 303956783}
 --- !u!1 &1472468680
 GameObject:
   m_ObjectHideFlags: 0
@@ -12947,6 +12955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1497062791}
   player: {fileID: 1450891969}
+  purchasedItems: []
 --- !u!61 &2029423308
 BoxCollider2D:
   m_ObjectHideFlags: 0

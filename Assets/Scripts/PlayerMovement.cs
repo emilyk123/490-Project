@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -7,6 +8,10 @@ public class PlayerMovement : MonoBehaviour
     public GameObject UI;
     public bool canMove = true;
     public GameObject inventory;
+    public Button healthButton;
+    public Button upgradeButton;
+    public Button keyButton;
+    public List<string> purchasedItems = new List<string>();
     bool close = false;
 
     void Update()
@@ -22,13 +27,15 @@ public class PlayerMovement : MonoBehaviour
         {
             foreach (Transform child in inventory.transform)
             {
-                if (child != null && child.gameObject.activeSelf)
+                if (purchasedItems.Contains(child.name))
                 {
-                    break;
+                    child.gameObject.SetActive(true);
+                }
+                else
+                {
+                    child.gameObject.SetActive(false);
                 }
             }
-
-            bool newState = false;
 
             if (!close)
             {
@@ -39,11 +46,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 inventory.SetActive(false);
                 close = false;
-            }
-
-            foreach (Transform child in inventory.transform)
-            {
-                child.gameObject.SetActive(newState);
             }
         }
 
