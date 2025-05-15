@@ -35,6 +35,6 @@ public class PlayerUIScript : MonoBehaviour
         if (healthBar == null)
             return;
 
-        healthBar.value = Mathf.Clamp(healthBar.value + amount, expBar.lowValue, expBar.highValue);
+        healthBar.value = Mathf.Clamp(healthBar.value + amount, healthBar.lowValue, healthBar.highValue);
     }
 }

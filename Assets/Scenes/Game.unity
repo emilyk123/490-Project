@@ -8262,7 +8262,7 @@ GameObject:
   - component: {fileID: 922988508}
   m_Layer: 0
   m_Name: SkullEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8310,7 +8310,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30
   m_Sprite: {fileID: -3097454778268114089, guid: a9932d5c3df4b3e40b0b32008f3b49cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12180,7 +12180,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -12329,6 +12329,7 @@ MonoBehaviour:
   upgradeButton: {fileID: 2029423307}
   keyButton: {fileID: 303956783}
   purchasedItems: []
+  ui: {fileID: 691999582}
 --- !u!1 &1472468680
 GameObject:
   m_ObjectHideFlags: 0
@@ -12344,7 +12345,7 @@ GameObject:
   - component: {fileID: 1472468685}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12392,7 +12393,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 30
   m_Sprite: {fileID: 619619960, guid: a9932d5c3df4b3e40b0b32008f3b49cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

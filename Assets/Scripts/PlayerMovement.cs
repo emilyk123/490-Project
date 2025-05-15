@@ -12,43 +12,48 @@ public class PlayerMovement : MonoBehaviour
     public Button upgradeButton;
     public Button keyButton;
     public List<string> purchasedItems = new List<string>();
+    public PlayerUIScript ui;
+
     bool close = false;
+    float damageTimer = 0f;
+    float damageInterval = 0.5f;
+    bool inEnemyRange = false;
 
     void Update()
     {
         if (canMove)
         {
-            transform.position = new Vector3(transform.position.x + Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime,
-                                             transform.position.y + Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime,
-                                              0);
+            transform.position = new Vector3(
+                transform.position.x + Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime,
+                transform.position.y + Input.GetAxisRaw("Vertical") * moveSpeed * Time.deltaTime,
+                0
+            );
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             foreach (Transform child in inventory.transform)
             {
-                if (purchasedItems.Contains(child.name))
-                {
-                    child.gameObject.SetActive(true);
-                }
-                else
-                {
-                    child.gameObject.SetActive(false);
-                }
+                child.gameObject.SetActive(purchasedItems.Contains(child.name));
             }
 
-            if (!close)
-            {
-                inventory.SetActive(true);
-                close = true;
-            }
-            else
-            {
-                inventory.SetActive(false);
-                close = false;
-            }
+            close = !close;
+            inventory.SetActive(close);
         }
 
+        if (inEnemyRange)
+        {
+            damageTimer += Time.deltaTime;
+            if (damageTimer >= damageInterval)
+            {
+                damageTimer = 0f;
+                ui.changeHealth(-10);
+            }
+        }
+        else
+        {
+            damageTimer = 0f;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -65,6 +70,19 @@ public class PlayerMovement : MonoBehaviour
         {
             canMove = false;
             UI.SetActive(true);
+        }
+
+        if (collision.CompareTag("Enemy"))
+        {
+            inEnemyRange = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            inEnemyRange = false;
         }
     }
 }
