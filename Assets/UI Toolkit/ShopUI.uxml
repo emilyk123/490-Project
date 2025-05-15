@@ -1,0 +1,22 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; margin-top: 100px; margin-right: 100px; margin-bottom: 100px; margin-left: 100px; flex-direction: row; background-image: url(&quot;project://database/Assets/Sprites/Dungeon_Tileset.png?fileID=-1337896302&amp;guid=9049b134130633848a81770abcbfef1e&amp;type=3#Dungeon_Tileset_78&quot;); border-top-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;">
+            <ui:GroupBox name="KeyGroupBox" style="width: 33%; height: 100%;">
+                <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Dungeon_Tileset.png?fileID=139261999&amp;guid=9049b134130633848a81770abcbfef1e&amp;type=3#Dungeon_Tileset_99&quot;); background-size: 100% 100%; width: 70%; height: 50%; -unity-text-align: upper-center; align-items: center; align-self: center; justify-content: center; align-content: center;" />
+                <ui:Label text="Health Potion:&#10;3 coins" style="background-size: 100% 100%; height: 20%; align-items: center; -unity-text-align: middle-center; align-content: center; align-self: center; justify-content: center; font-size: 30px; color: rgb(255, 255, 255); padding-bottom: 10px;" />
+                <ui:Button text="Buy" style="background-size: 100% 100%; height: 10%; font-size: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; width: 60%; align-items: center; align-self: center; margin-bottom: 65px;" />
+            </ui:GroupBox>
+            <ui:GroupBox name="HealthGroupBox" style="width: 33%; height: 100%;">
+                <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Dungeon_Tileset.png?fileID=-1668038265&amp;guid=9049b134130633848a81770abcbfef1e&amp;type=3#Dungeon_Tileset_98&quot;); background-size: 100% 100%; width: 70%; height: 50%; -unity-text-align: upper-center; align-items: center; align-self: center; justify-content: center; align-content: center;" />
+                <ui:Label text="Health Potion:&#10;3 coins" style="background-size: 100% 100%; height: 20%; align-items: center; -unity-text-align: middle-center; align-content: center; align-self: center; justify-content: center; font-size: 30px; color: rgb(255, 255, 255); padding-bottom: 10px;" />
+                <ui:Button text="Buy" style="background-size: 100% 100%; height: 10%; font-size: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; width: 60%; align-items: center; align-self: center; margin-bottom: 20px;" />
+                <ui:Button text="Cancel" style="background-size: 100% 100%; height: 8%; font-size: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; width: 100%; align-items: center; align-self: center; margin-bottom: 20px;" />
+            </ui:GroupBox>
+            <ui:GroupBox name="HealthGroupBox" style="width: 33%; height: 100%;">
+                <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Dungeon_Tileset.png?fileID=-1772979030&amp;guid=9049b134130633848a81770abcbfef1e&amp;type=3#Dungeon_Tileset_97&quot;); background-size: 100% 100%; width: 60%; height: 50%; -unity-text-align: upper-center; align-items: center; align-self: center; justify-content: center; align-content: center;" />
+                <ui:Label text="Upgrade Potion:&#10;3 coins" style="background-size: 100% 100%; height: 20%; align-items: center; -unity-text-align: middle-center; align-content: center; align-self: center; justify-content: center; font-size: 30px; color: rgb(255, 255, 255); padding-bottom: 10px;" />
+                <ui:Button text="Buy" style="background-size: 100% 100%; height: 10%; font-size: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; width: 60%; align-items: center; align-self: center; margin-bottom: 65px;" />
+            </ui:GroupBox>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

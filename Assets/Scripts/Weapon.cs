@@ -4,6 +4,7 @@ public class Weapon : MonoBehaviour
 {
     public GameObject bulletPrefab;      // Assign in Inspector
     public Transform firePoint;          // Assign in Inspector
+    bool canShoot = true;
 
     void Update()
     {
@@ -14,7 +15,7 @@ public class Weapon : MonoBehaviour
         firePoint.rotation = Quaternion.Euler(0f, 0f, angle);
 
         // Fire when button is clicked
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canShoot)
         {
             Shoot();
         }
@@ -24,5 +25,13 @@ public class Weapon : MonoBehaviour
     {
         // Instantiate bullet at firePoint position and rotation
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Shop"))
+        {
+            canShoot = false;
+        }
     }
 }
